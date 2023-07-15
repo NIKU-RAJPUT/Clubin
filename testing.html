@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Testing Project</title>
+<!-- 
+    Bootstrap library start
+-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<!-- 
+    Bootstrap library end
+-->
+<!-- 
+  This is our css file in which we will work
+-->
+<link rel="stylesheet" type="text/css" href="CSS/style1.css">
+<script type="text/javascript" src="JS/style.js"></script>
+<!-- 
+  Our CSS file end
+-->
+<!-- 
+    This is Online font library
+-->    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
+<script type="text/javascript">
+    function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = 'vijesh';
+     if (user != "" && user != null) {
+       setCookie("username", user, 300);
+     }
+  }
+}
+</script>
+<!-- 
+    Online font library end
+-->  
+</head>
+<body onload="checkCookie()">
+<!-- 
+    Header Section Strat
+-->
+<section class="main-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-sm-2 col-lg-2">
+                <div class="logo">
+                    <img src="IMG/logo1.png" width="100%" height="85.5">
+                </div>              
+            </div>
+            <div class="col-md-10 col-sm-10 col-lg-10">
+                <div class="topp-title">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-lg-6">
+                            <div class="random-txt">
+                                Welcome to IT Solution & Services WordPress Theme
+                            </div>                                  
+                        </div>
+                        <div class="col-md-4 col-sm-4col-lg-4">
+                            <div class="message-top">
+                                <i class="fa fa-envelope iocon-class"></i> niku01@gmail.com
+                                <i class="fa-solid fa-clock"></i> Mon - Sat 8:00 am - 7:00
+                            </div>
+                        </div>                                  
+                        <div class="col-md-2 col-sm-2 col-lg-2">
+                            <div class="social-media-icon"> 
+                                &nbsp &nbsp<a href="#"><i class="fa-brands fa-facebook-f"></i></a>&nbsp &nbsp
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>&nbsp &nbsp
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>&nbsp &nbsp
+                                <a href="#"><i class="fab fa-pinterest"></i></a>&nbsp &nbsp
+                            </div>                          
+                        </div>                  
+                    </div>
+                </div>
+                <div class="border"></div>
+                <div class="bottomp-title">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-lg-6">
+                            <nav class="navbar navbar-expand-md">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link"> Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link"> About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Services</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="contact.html" class="nav-link">Contact</a>
+                                    </li>
+                                </nav>
+                            </div>
+                            <div class="col-md-2 col-sm-2 col-lg-2">
+                                <div class="leftpartofbottom">
+                                    &nbsp<a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>&nbsp
+                                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>&nbsp
+                                </div>
+                            </div>  
+                            <div class="col-md-4 col-sm-4 col-lg-4">
+                                <div class="one">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="two">
+                                    <p>Call Anytime</p>
+                                    <h6>+88(9084)6758</h6>
+                                </div>
+                            </div>                  
+                        </div>
+                    </div>
+                </div>          
+            </div>
+        </div>
+    </section>
+<!--
+    Header Section End
+-->
+<!--
+slider start
+-->
+<section class="second">
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div class="slides">
+            <img src="IMG/im.jpg">
+            <div class="slides-text">
+                <p>Experince the best solution</p>
+                <h3>
+                    IT Solution & Services
+                </h3>
+                <a href="#" class="btn btn-md btn-info" onclick="first_function(5)">Learn More</a>
+                <!-- <a href="#">Services</a> -->
+            </div>          
+        </div>
+    </div>
+</section>
+<!--
+slider end
+-->
+<!-- 
+About us Start
+-->
+<section class="aboutus">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 ">
+                <div class="first"></div>
+            </div>
+            <div class="col-md-8 ">
+                <div class="partner">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                            <div class="first-image">
+                                <img src="IMG/campaign-creators-gMsnXqILjp4-unsplash.jpg" width="80%" height="85">
+                            </div>  
+                            </div>  
+                            <div class="col-md-6 col-sm-6 col-lg-6">
+                                <div class="second-image">
+                                    <img src="IMG/mimi-thian-vdXMSiX-n6M-unsplash.jpg" width="80%" height="90%">
+                                </div>
+                            </div>                      
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6">
+                        <div class="fourth">
+                            <h4>- About Our Company</h4>
+                            <h3>WE'RE PARTNER OR YOUR BUSINESS</h3>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.
+                            </p>
+                            <div class="in-first-icon">
+                                <i class="fa fa-globe" aria-hidden="true"></i>&nbsp Web Devlopment
+                            </div>
+                            <div class="in-second-icon">
+                                <i class="fa-solid fa-network-wired"></i>&nbsp Internal Networking
+                            </div>
+                            <div class="button-use">
+                                <a href="#" class="btn btn-md btn-info">Learn More</a>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+                </div>
+            </div>  
+            <div class="col-md-2 col-sm-2 col-lg-2">
+                <div class="fifth">
+                </div>
+            </div>      
+        </div>
+    </div>
+</section>
+ <!-- 
+About us end
+-->
+<section class="implementation-next-part">
+    <div class="container-fluid">
+        <div class="three-images">
+        <div class="row">
+                <div class="col-md-4 col-sm-4 col-lg-4">
+                    <div class="first-image-of-part">
+                        <img src="IMG/mimi-thian-vdXMSiX-n6M-unsplash.jpg" width="219.17" height="147.94">
+                        <div class="icon-adding">
+                            <div class="check">
+                            <i class="fa fa-cogs" aria-hidden="true"></i>
+                            </div>
+                            <p>
+                               Perfect solutions that business demands
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-lg-4">
+                    <div class="second-image-of-part">
+                        <img src="IMG/jason-goodman-Oalh2MojUuk-unsplash.jpg" width="219.17" height="147.94">
+                        <div class="icon-adding">
+                            <div class="check">
+                            <i class="fa fa-cogs" aria-hidden="true"></i>
+                            </div>
+                            <p>
+                               Perfect solutions that business demands
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-lg-4">
+                    <div class="third-image-of-part">
+                        <img src="IMG/mars-sector-6-YgOCJz9uGMk-unsplash.jpg" width="219.17" height="147.94">
+                        <div class="icon-adding">
+                            <div class="check">
+                            <i class="fa fa-cogs" aria-hidden="true"></i>
+                            </div>
+                            <p>
+                               Perfect solutions that business demands
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>  
+</section>
+<section class="fouth-division">
+    
+</section>
+<section>
+    <div class="footer1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <div class="fit-it">
+                    <p>We're here to help you to grow your business</p>
+                    <h3>Looking for the best it Business Solutions</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <div class="fit-it-2">
+                    <a href="#" class="btn btn-md btn-info">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="working-place">
+    <form name="myform">
+        <input type="text" name="name" class="form-control" placeholder="enter name" id="input-name"> 
+        <p id="check-name" style="color: red;"></p> 
+        <input type="password" name="password" class="form-control" placeholder="password" id="password">  
+      <!--   <br> Input Status :  <span id="mylocation" style="color: red;">No input</span>  <br>  -->
+        <input type="password" name="cpassword" class="form-control" placeholder="Confirm password" id="confirm-password">  
+        <p id="check-password" style="color: red;"></p>  <br>      
+        <button type="button" class="btn btn-md btn-success" onclick="validate()">Submit</button>
+    </form>
+ <!--    <div id="check-jquery">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <button id="show" class="btn btn-info" style="text-align: center; margin: 10px;">Click Here To Hide</button>
+    <button id="hide" class=" btn btn-info" style="text-align: center; margin: 10px;">Click Here To Show</button>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#show").click(function(){
+                $("#check-jquery").hide()
+            });
+            $("#hide").click(function(){
+                $("#check-jquery").show()
+            });
+        });
+    </script> -->
+    <div class="implement-jquery">
+        <button class="click-here"><h5>Profile View</h5></button><br>
+        <p class="operation" style="display: none;">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".click-here").click(function(){
+                $(".operation").hide(20);
+            });
+            $(".click-here").click(function(){
+                $(".operation").show();
+            });
+        });
+    </script>
+</section>
+<section class="footer-end">
+    <div class="footer-end-width">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <h3>infetech</h3>
+                <p>sipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="social-media-icon1"> 
+                    &nbsp &nbsp<a href="#"><i class="fa-brands fa-facebook-f"></i></a>&nbsp &nbsp
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>&nbsp &nbsp
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>&nbsp &nbsp
+                    <a href="#"><i class="fab fa-pinterest"></i></a>&nbsp &nbsp
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="links-import">
+                    <h4>links</h4>
+                    <div class="border"></div>
+                    <ul>
+                        <li>About us</li>
+                        <li>meet our team</li>
+                        <li>News & media</li>
+                        <li>Our project</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="news-imp">
+                    <h4>Newsselter</h4>
+                    <p>sign up for our letest news.We don't give you spam mail</p>
+                    <div class="email-icon">
+                        <input type="email" name="" placeholder="enter your mail"><i class="fab fa-telegram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="contact-details">
+                     <h4>Contact</h4>
+                     <i class="fa fa-phone" aria-hidden="true"></i>&nbsp 6209202270 <br>
+                     <i class="fa fa-envelope iocon-class"></i>&nbsp niku01@gmail.com <br>
+                     <i class="fa-solid fa-location-dot"></i>&nbsp 302022, Poornima institute of engineering and technology
+                </div>
+            </div>
+        </div>
+        <div class="botton-footer">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>All copyright 2022 by layerdrops.com</p>
+                </div>          
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+</body>
+</html>
+<input type="button" value="setCookie" onclick="setCookie()">  
+<input type="button" value="getCookie" onclick="getCookie()">  
+<script type="text/javascript">
+      function setCookie()  
+    {  
+        document.cookie="vijesh";  
+    }  
+    function getCookie()  
+    {  
+        if(document.cookie.length!=0)  
+        {  
+        alert(document.cookie);  
+        }  
+        else  
+        {  
+        alert("Cookie not available");  
+        }  
+    }  
+</script>

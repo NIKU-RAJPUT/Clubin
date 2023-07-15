@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Clubin</title>
+	<!-- 
+    Bootstrap library start
+-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<!-- 
+    Bootstrap library end
+-->
+<!-- 
+  These are our css file in which we will work
+-->
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+<script type="text/javascript" src="JS/javascript.js"></script>
+
+<!-- 
+  Our CSS file end
+-->
+<!-- 
+    This is Online font library
+-->    
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
+<!-- 
+    Online font library end
+-->  
+</head>
+<body>
+   <section class="header-section">
+    <img src="IMG/v97_353.png" height="800" width="100%">
+    <div class="nav-create">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-lg-4 col-4">
+                    <div class="nav-left-part">
+                        <img src="IMG/logo.png" width="100" height="100">
+                    </div>
+                </div>   
+                <div class="col-md-8 col-lg-8 col-sm-8 col-8">
+                    <div class="nav-right-part">
+                        <nav class="navbar navbar-expand-md">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"> Popular</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"> Upcoming</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Featured</a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="login-btn-underdiv">
+                                        <button class="btn btn-md btn-primary" data-bs-toggle="modal" data-bs-target="#login"><a href="#" class="nav-link">Login</a></button>
+                                        <!-- login model -->
+                                        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog">
+                                            <div class="modal-content">
+                                              <div class="model-head">
+                                                <div class="two-part-here">
+                                                    <div class="text-here-option">
+                                                    <h5>Log In With</h5>
+                                                    </div>
+                                                    <div class="google-option">
+                                                    <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                                                    </div>
+                                                </div>                                
+                                                <div class="button-here">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                            </div>
+                                            <div class="border-set">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-4 col-sm-4 col-lg-4">
+                                                            <div class="division-one"></div>
+                                                        </div>
+                                                        <div class="col-md-4 col-sm-4 col-lg-4">
+                                                            <div class="division-two">Or</div>
+                                                        </div>
+                                                        <div class="col-md-4 col-sm-4 col-lg-4">
+                                                            <div class="division-three"></div>
+                                                        </div>                                                       
+                                                    </div>                                                    
+                                                </div>                                                
+                                            </div>
+                                            <div class="modal-body-here">
+                                                <div class="person-icon">
+                                                    <i class="fa-solid fa-user"></i>
+                                                </div>
+                                                <div class="put-data-here">
+                                                    <input type="email" name="" required placeholder="email id" id="email-id">
+                                                    <p id="email-id_error_show" style="color:red; text-align: center;"></p>
+                                                </div>
+                                            </div>
+                                            <div class="border-here"></div>
+                                            <div class="modal-body-here1">
+                                                <div class="person-icon">
+                                                    <i class="fa fa-key" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="put-data-here">
+                                                    <input type="password" name="" required placeholder="enter password" id="password">
+                                                    <p id="password_error_show" style="color:red; text-align: center;"></p>
+                                                </div>
+                                            </div>
+                                            <div class="modal-body-here2"></div>
+                                            <div class="border-here-1">
+                                                <button class="btn-imp"onclick="varify_details()" onclick="validate_email()"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp Log In</button>
+                                            </div>
+                                            <div class="forget-password">
+                                                <a href="#" class="text-for-forget-password">forgot password ?</a>      
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="signup-btn-underdiv">
+                                <button class="btn btn-md btn-primary" data-bs-toggle="modal" data-bs-target="#sign-up"><a href="#" class="nav-link">Sign Up</a></button>
+                                        <!-- login model -->
+                                        <div class="modal fade" id="sign-up" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog">
+                                            <div class="modal-content">
+                                              <div class="model-head">
+                                                <div class="two-part-here-sign-up">
+                                                    <div class="text-here-option-sign-up">
+                                                    <h5>Sign Up</h5>
+                                                    </div>
+                                                </div>                                
+                                                <div class="button-here">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                            </div>
+                                            <div class="modal-body-here-sign-up">
+                                                <div class="person-icon-sign-up">
+                                                    <i class="fa-solid fa-user"></i>
+                                                </div>
+                                                <div class="put-data-here-sign-up">
+                                                    <input type="text" name="" required placeholder="usser name">
+                                                </div>
+                                            </div>
+                                            <div class="modal-body-here1-sign-up">
+                                                <div class="person-icon">
+                                                   <i class="fa-solid fa-envelope"></i>
+                                                </div>
+                                                <div class="put-data-here">
+                                                    <input type="email" name="" required placeholder="enter email">
+                                                </div>
+                                            </div>        
+                                            <div class="modal-body-here1-sign-up">
+                                                <div class="person-icon-sign-up">
+                                                    <i class="fa fa-key" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="put-data-here-sign-up">
+                                                    <input type="password" name="" required placeholder="enter password">
+                                                </div>
+                                            </div>
+                                            <div class="modal-body-here1-sign-up">
+                                                <div class="person-icon-sign-up">
+                                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="put-data-here-sign-up">
+                                                    <input type="password" name="" required placeholder="confirm password">
+                                                </div>
+                                            </div>
+                                            <div class="modal-body-here1-sign-up">
+                                                <div class="person-icon-sign-up">
+                                                    <i class="fa fa-key" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="put-data-here-sign-up">
+                                                    <input type="number" name="" required placeholder="phone number 10 digit">
+                                                </div>
+                                            </div>
+                                            <div class="border-here-sign-up"></div>
+                                            <div class="border-here-2">
+                                                <button class="btn-imp"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp<span>Sign Up</span></button>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div> 
+        </div>     
+    </div>            
+</div>
+</div>
+<div class="text-over-image">
+    <div class="left-part-of-text">
+        <h3> Make Your <span>Party</span> Super Fun</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+    </div>
+    <div class="right-part-of-text">
+        <div class="first-image-on-head">
+            <img src="IMG/v97_357.png" class="image-fit" width="150" height="250" >
+        </div>
+        <div class="second-image-on-head">
+            <img src="IMG/v106_733.png" class="image-fit" width="150" height="250" >
+        </div>
+        <div class="third-image-on-head">
+            <img src="IMG/v106_730.png" class="image-fit" width="180" height="250" >
+        </div>
+        <div class="fourth-image-on-head">
+            <img src="IMG/v97_627.png" class="image-fit" width="180" height="250" >
+        </div>
+    </div>
+</div>
+</section>
+<section class="city-area-date">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-lg-4 col-4">
+                <label>City</label>
+                <select>
+                    <option> </option>
+                    <option>Jaipur</option>
+                    <option>Ajmer</option>
+                    <option>Dholpur</option>
+                    <option>Bhartpur</option>
+                </select>
+            </div>
+            <div class="col-md-4 col-sm-4 col-lg-4 col-4">
+                <label>Area</label>
+                <select>
+                    <option> </option>
+                    <option>Sitapur</option>
+                    <option>Tonk</option>
+                    <option>India Gate</option>
+                    <option>Kumbha Marg</option>
+                </select>
+            </div>
+            <div class="col-md-4 col-sm-4 col-lg-4 col-4">
+                <label>Date</label>
+                <select>
+                    <option> </option>
+                    <option>05-06-2022</option>
+                    <option>09-06-2005</option>
+                    <option>11-11-2002</option>
+                    <option>30-07-2021</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="Popular-clubs">
+    <h2>Popular Clubs</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-lg-3 col-6">                    
+                <img src="IMG/v97_495.png" width="253" height="250" class="image-fit">
+                <p>Asteia</p>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3 col-6">
+                <img src="IMG/v97_496.png" width="253" height="250" class="image-fit">
+                <p>Roadies</p>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <img src="IMG/v97_497.png" width="253" height="250" class="image-fit">
+                <p>Diana</p>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <img src="IMG/v97_521.png" width="253" height="250" class="image-fit">
+                <p>Stardust</p>
+            </div>
+        </div>             
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <img src="IMG/v97_606.png" width="253" height="250" class="image-fit">
+                <p>Tokio Club</p>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+               <img src="IMG/v97_607.png" width="253" height="250" class="image-fit">
+               <p>Playboy Club</p>
+           </div>
+           <div class="col-md-3 col-sm-3 col-lg-3">
+               <img src="IMG/v97_608.png" width="253" height="250" class="image-fit">
+               <p>Lucifer Lounge</p>
+           </div>
+           <div class="col-md-3 col-sm-3 col-lg-3">
+               <img src="IMG/v97_609.png" width="253" height="250" class="image-fit">
+               <p>Pentagon</p>
+           </div>
+       </div>             
+   </div>
+   <div class="button-implement">
+       <button> View All</button>
+   </div>
+</section>
+<section class="Category">
+    <h2>Category</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="check-image-background">
+                    <img src="IMG/v97_542.png" width="253" height="250" class="image-fit">
+                    <div class="text">
+                        <span><h4>Happy Hours</h4></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <img src="IMG/v97_538.png" width="253" height="250" class="image-fit">
+                <div class="text">
+                    <span><h4>Night Party</h4></span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <img src="IMG/v97_546.png" width="253" height="250" class="image-fit">
+                <div class="text">
+                    <span><h4>Concert</h4></span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <img src="IMG/v97_550.png" width="253" height="250" class="image-fit">
+                <div class="text">
+                    <span><h4>Stand Up</h4></span>
+                </div>
+            </div>
+        </div>             
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <img src="IMG/v97_623.png" width="253" height="250" class="image-fit">
+                <div class="text">
+                    <span><h4>Karoke</h4></span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+               <img src="IMG/v97_607.png" width="253" height="250" class="image-fit">
+               <div class="text">
+                <span><h4>Art / Craft</h4></span>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-lg-3">
+           <img src="IMG/v97_627.png" width="253" height="250" class="image-fit">
+           <div class="text">
+            <span><h4>Ladies Night</h4></span>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-3 col-lg-3">
+       <img src="IMG/v97_631.png" width="253" height="250" class="image-fit">
+       <div class="text">
+        <span><h4>EDM Night</h4></span>
+    </div>
+</div>
+</div>             
+</div>
+<div class="button-implement">
+   <button> View All</button>
+</div>
+</section>
+<section class="Upcoming-event">
+    <h2>Upcoming Events</h2>
+    <div class="container-fluid">
+       <div class="row">
+           <div class="col-md-3 col-sm-3 col-lg-3">
+            <img src="IMG/v97_583.png" width="253" height="250" class="image-fit">
+            <div class="date-text">
+               <div class="Date1">
+                <h4>18 July 2022</h4>
+            </div>
+            <div class="text1">
+                <h4>Roadies Clup</h4>
+                <p>Night party</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-3 col-lg-3">
+        <img src="IMG/v97_585.png" width="253" height="250" class="image-fit">
+        <div class="date-text">
+           <div class="Date1">
+            <h4>18 July 2022</h4>
+        </div>
+        <div class="text1">
+            <h4>Asteria</h4>
+            <p>Live Music</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 col-sm-3 col-lg-3">
+    <img src="IMG/v97_584.png" width="253" height="250" class="image-fit">
+    <div class="date-text">
+       <div class="Date1">
+        <h4>18 July 2022</h4>
+    </div>
+    <div class="text1">
+        <h4>Trove Club</h4>
+        <p>Concert</p>
+    </div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-lg-3">
+    <img src="IMG/v97_585.png" width="253" height="250" class="image-fit">
+    <div class="date-text">
+       <div class="Date1">
+        <h4>18 July 2022</h4>
+    </div>
+    <div class="text1">
+        <h4>Diana</h4>
+        <p>Live Music</p>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid">
+   <div class="row">
+       <div class="col-md-3 col-sm-3 col-lg-3">
+        <img src="IMG/v97_251.png" width="253" height="250" class="image-fit">
+        <div class="date-text">
+           <div class="Date1">
+            <h4>18 July 2022</h4>
+        </div>
+        <div class="text1">
+            <h4>Roadies Clup</h4>
+            <p>Night party</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 col-sm-3 col-lg-3">
+    <img src="IMG/v97_257.png" width="253" height="250" class="image-fit">
+    <div class="date-text">
+       <div class="Date1">
+        <h4>18 July 2022</h4>
+    </div>
+    <div class="text1">
+        <h4>Asteria</h4>
+        <p>Live Music</p>
+    </div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-lg-3">
+    <img src="IMG/v97_255.png" width="253" height="250" class="image-fit">
+    <div class="date-text">
+       <div class="Date1">
+        <h4>18 July 2022</h4>
+    </div>
+    <div class="text1">
+        <h4>Trove Club</h4>
+        <p>Concert</p>
+    </div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-lg-3">
+    <img src="IMG/v97_257.png" width="253" height="250" class="image-fit">
+    <div class="date-text">
+       <div class="Date1">
+        <h4>18 July 2022</h4>
+    </div>
+    <div class="text1">
+        <h4>Diana</h4>
+        <p>Live Music</p>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div class="button-implement">
+   <button> View All</button>
+</div>
+</section>
+<section class="footer-first">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-lg-6">
+                <div class="text-here">
+                    <h3>Create an <span>Event</span></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </p>
+                </div>
+                <div class="button-last">
+                    <button>Contact us</button>
+                </div>                    
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-6">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-lg-4">
+                        <div class="first-image1">
+                            <img src="IMG/v97_356.png" width="150" height="330" class="image-fit">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-lg-4">
+                        <div class="first-image2">
+                            <img src="IMG/v97_631.png" width="150" height="330" class="image-fit">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-lg-4">
+                        <div class="first-image3">
+                            <img src="IMG/v106_733.png" width="150" height="330" class="image-fit">
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </div>            
+    </div>        
+</section>
+<section class="footer">
+   <div class="footer-end">
+       <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="last-logo">
+                    <img src="IMG/logo.png" width="100" height="100">
+                </div>
+                <div class="logo-social">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>&nbsp
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>&nbsp
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>&nbsp
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="nav-buttom">
+                    <h5>Quick Links</h5>
+                    <ul >
+                        <li><a href="#" class="nav-link">Popular</a></li>
+                        <li><a href="#" class="nav-link">Upcoming</a></li>
+                        <li><a href="#" class="nav-link">Featured</a></li>
+                    </ul>
+                </div> 
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="nav-buttom">
+                    <h5>Useful Links</h5>
+                    <ul >
+                        <li>
+                            <a href="#" class="nav-link">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">Privacy & Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">Terms & Condition</a>
+                        </li>
+                    </ul>
+                </div>                     
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="nav-buttom">
+                    <h5>More</h5>
+                    <ul >
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>&nbsp niku0000singh@gamil.com 
+                        </li>
+                        <li>
+
+                            <i class="fa-solid fa-phone"></i>&nbsp +91 6209202270
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>&nbsp Poornima institute of engineering and technology
+                        </li>
+                    </ul>
+                </div>  
+            </div>
+        </div>             
+    </div>
+</div>
+</section>
+</body>
+</html>
